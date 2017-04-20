@@ -21,7 +21,7 @@ The original code by the author (Song Han) is in caffe. I tried using caffe. But
 * pickle
 
 # Usage
-I have provided implementation of two algorithms for pruning. They are: `reduce.py` and `mnist_cnn_<>.py`
+I have provided implementation of two algorithms for pruning. They are: `reduce.py` and `mnist_cnn_<number>.py`
 
 1) `run reduce.py`
 Reduce folder contains reduce.py and the screenshot of the output. run `python reduce.py` in terminal and the program would run. `weights.csv` file contains a small list of weights and the output of neurons in the format `weight x output_of_neuron`
