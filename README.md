@@ -2,7 +2,7 @@
 This is my final year project of Bachelor of Engineering. Its still incomplete though. I am trying to replicate the research paper "Deep Compression" by Song Han et. al. This paper received best paper award in ICLR 2016.
 
 # Overview
-The original code by the author (Song Han) is in caffe. I tried using caffe. But caffe is waste of time. So I decided to implement the code in tensorflow. Even in tensorflow some things are difficult to implement. I am still figuring out some ways to completely implement the idea. I am sorry but I didn't get time to properly add comments to the code. So you might find it difficult to understand the code. But its not that difficult I assure you. I will soon add proper comments and algorithm in this repo. I started just the 'pruning' part of the paper. For 'Quantization' part you may refer to the tensorflow link I have provided in the Resources section.
+The original code by the author (Song Han) is in caffe. I tried using caffe but caffe is waste of time. So I decided to implement the code in tensorflow. Even in tensorflow some things are difficult to implement. I am still figuring out some ways to completely implement the idea. I am sorry but I didn't get time to properly add comments to the code. So you might find it difficult to understand the code. But its not that difficult I assure you. I will soon add proper comments and algorithm in this repo. I started just the 'pruning' part of the paper. For 'Quantization' part you may refer to the tensorflow link I have provided in the Resources section. The dataset on which this code works is MNIST.
 
 # Resources
 1) Deep Compression research paper - https://arxiv.org/abs/1510.00149
