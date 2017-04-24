@@ -19,20 +19,28 @@ The original code by the author (Song Han) is in caffe. I tried using caffe but 
 * tensorflow
 * future
 * pickle
+* matplotlib
+* sklearn
 
 # Usage
 I have provided implementation of two algorithms for pruning. They are: `reduce.py` and `mnist_cnn_<number>.py`
+There is an implementation of quantization code named as `kmeans.py`
 
-1) `run reduce.py`
+1) run `python reduce.py`
 Reduce folder contains reduce.py and the screenshot of the output. run `python reduce.py` in terminal and the program would run. `weights.csv` file contains a small list of weights and the output of neurons in the format `weight x output_of_neuron`
 weights.csv can be updated according to your choice. This algorithm however works for just a single neuron and not an entire neural network.<br />
 __LOGIC:__<br />
 It uses the logic of subset selection/0-1 knapsack
 
-2) `run mnist_cnn_1.0.py`
+2) run `python mnist_cnn_1.0.py`
 This program is a small convolutional neural network with three hidden layers. At last it saves all the variables using tf.Saver(). Also, I have tried to pickle all the weights for further use.
 For now you can ignore `minst_cnn_1.2.py`. It reuses the variables stored by `mnist_cnn_1.0.py`. The code is not complete.<br />
 **LOGIC:**<br />
 The logic behind this program is straight from the Deep Compression research paper. When you get a trained neural network i.e. `mnist_cnn_1.0.py` you remove the edges from it by using a threshold value. Now what exactly do you do in the program to remove the edges? well according to me, I have converted the weight values of such edges to 'NaN'. This is so that it does not change its value in the future when the neural network is retrained (given in the paper). If you just assign zero to these pruned edges, the retraining process might either regenerate the pruned edges or run with a low accuracy.
 But even by turning them to 'NaN' I don't know how successful the neural network be after retraining. Because 'NaN'*<any_number> = 'NaN'. So if matrix multiplication while retraining makes other weights as 'NaN' then the neural network would collapse. But all these things would be clear only when the program is actually tested.<br />
 *PS*: The code to make the weight values 'NaN' can be found in `test.py`
+
+3) run `python kmeans.py`
+This program prepares a codebook for quantization as mentioned in the deep compression research paper. Also,it plots the graphs of datapoints in it.<br />
+**LOGIC**<br />
+It uses kmeans algorithm as mentioned in the paper.
