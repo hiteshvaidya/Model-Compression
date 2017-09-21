@@ -7,7 +7,7 @@ The original code by the author (Song Han) is in caffe. I tried using caffe but 
 # Resources
 1) Deep Compression research paper - https://arxiv.org/abs/1510.00149
 2) Video Explaining the paper by its author - https://youtu.be/vouEMwDNopQ
-3) Github repository of the author - https://github.com/hiteshvaidya/Deep-Compression-AlexNet
+3) Github repository of the author - https://github.com/songhan/Deep-Compression-AlexNet
 4) A short video explaining model compression - https://www.youtube.com/shared?ci=1ivgFE--PBY (Ignore the DSD and part)
 5) How to use Alexnet in Tensorflow - https://kratzert.github.io/2017/02/24/finetuning-alexnet-with-tensorflow.html
 6) Quantization of Neural Network by using native Tensorflow operations - https://www.tensorflow.org/performance/quantization
